@@ -1,0 +1,1347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    text-decoration: none;
+    list-style: none;
+    font-family: "Arial";
+}
+::-webkit-scrollbar-track{
+    background-color: #ff9600;
+}
+::-ms-scrollbar-thumb{
+    background: #ff9600;
+}
+::-ms-scrollbar-track{
+    background-color: #ff9600;
+}
+:root{
+    --bg-color:#303449;
+    --shad:#303552;
+    --text: #ff9600;
+    --ab: #1f2233;
+    /* --bg-color:#111111;
+    --shad:#1d1d1d;
+    --text:#ff9600;
+    --ab:var(--bg-color); */
+}
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  
+}
+.nav.sticky .logo{
+    color: #fff;
+}
+.nav.sticky{
+    background-color:var(--text);
+    z-index: 44;
+}
+.home{
+    /* background-image: -moz-linear-gradient( 90deg, rgb(50,54,76) 0%, rgb(32,35,52) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(50,54,76) 0%, rgb(32,35,52) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(50,54,76) 0%, rgb(32,35,52) 100%); */
+    display: flex;
+    background: var(--bg-color);
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+    height:100vh;
+  }
+  .home .textbx{
+    
+    padding-left: 6rem;
+  }
+  .home .textbx p{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 100;
+    width: 70%;
+  }
+.home .textbx h3{
+    font-size: 2em;
+    color: #fff;
+}
+.home .textbx h1{
+    font-size: 4.3rem;
+    color: #fff;
+}
+.home .textbx h2{
+    font-size: 4em;
+    color: #fff;
+    font-weight: 100;
+
+}
+.home .textbx h2 span{
+    color: var(--text);
+    position: relative;
+
+    width: 0;
+    height: 10px;
+    overflow: hidden;
+}
+.home .textbx h2 span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    animation: typing 3s steps(12) infinite;
+    border-left: 5px solid var(--text);
+   
+    
+}
+@keyframes typing {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 112%;
+    }
+    
+}
+.home .textbx .link a{
+    color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.nav .con a:hover,
+.home .textbx .link a:nth-child(2),
+.home .textbx .link a:hover{
+    background-color: #fff;
+    color: var(--text);
+}
+.home .textbx .link a:nth-child(2):hover{
+    background-color: transparent;
+    color: #fff;
+}
+  .home .textbx .link{
+    margin-top: 20px;
+  }
+.home .textbx .link a:nth-child(2){
+    margin-left: 10px;
+}
+.home .imgbx{
+    padding-right: 17em;
+    
+    
+}
+.home .imgbx img{
+    width: 25vw;
+    border-radius: 20px;
+    position: relative;
+
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.nav .logo{
+    color: var(--text);
+    font-size: 2em;
+    font-weight: 900;
+    padding-left: 2em;
+}
+.nav ul li{
+    display: inline-block;
+}
+.nav ul li a{
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+}
+.nav ul li a:hover{
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.nav .con{
+    padding-right: 2em;
+}
+.nav .con a{
+    padding: 10px;
+    border:2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--ab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.about .imgbx img{
+    width: 30vW;
+}
+.about .imgbx{
+    padding-left: 6em;
+    padding-bottom: 10em;
+}
+.about .textbx{
+    width: 50%;
+    height: 40vh;
+    background: var(--shad);
+    transform: translateX(-100px) translateY(50px);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.about .textbx .text{
+padding: 10%;
+}
+.about .textbx .text h2{
+    font-size: 2em;
+    color: var(--text);
+    padding-bottom: 0.5em;
+}
+.about .textbx .text p{
+    font-size: 13px;
+    color: #fff;
+}
+.about .textbx .text .link a{
+    padding: 8px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+}
+.about .textbx .text .link a:nth-child(2){
+    margin-left: 5px;
+}
+.about .textbx .text .link{
+    margin-top: 20px;
+}
+.about .textbx .text .link a:hover{
+    background: #fff;
+    color: var(--text);
+}
+.service{
+    width: 100%;
+    height: 70vh;
+    background: var(--ab);
+}
+.service h1{
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+}
+#top{
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.4;
+    padding: 5px;
+    padding-top: 2em;
+}
+.service .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    gap: 1em;
+    padding: 3em;
+}
+.service .container .card{
+    height: 45vh;
+    background-color: var(--shad);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+transition: 0.3s;
+    flex-direction: column;
+}
+.service .container .card .imgbx{
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 30%;
+    position: relative;
+    z-index: 3;
+    transition: 0.3s;
+}
+.service .container .card .textbx{
+    width: 100%;
+    height: 70%;
+    padding: 2em;
+}
+.service .container .card .textbx h2{
+    color:var(--text);
+    font-size: 3.1em;
+
+}
+.service .container .card .textbx p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 0;
+}
+#ls{
+    margin-top: 20px;
+
+}
+.service .container .card .textbx  a{
+    padding: 10px;
+    position:absolute;
+    border: 2px solid var(--text);
+    color: var(--text);
+    margin-top: 10px;
+
+}
+.service .container .card .textbx  a:hover{
+    background:var(--text);
+    color: #fff;
+    
+}
+.service .container .card .imgbx::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text);
+    z-index:-1;
+    clip-path: circle(30% at 13% 0%);
+    transform: 0.3s;
+
+}
+.service .container .card:hover .imgbx::before{
+    clip-path: circle(140% at 13% 0%);
+    transition: 0.3s;
+
+}
+.service .container .card .imgbx  i{
+    padding-top: 2rem;
+    font-size: 5em;padding-left: 2rem;
+    color: #fff;
+    
+}
+.service .container .card:hover{
+    transform: translateY(-15px);
+    transition: 0.3s;
+}
+.service .container .card .imgbx .icon{
+    z-index: 7;
+}
+.service article{
+    font-size: 20px;
+    text-align: center;
+    padding: 0.5em;
+    color: #fff;
+}
+.skill{
+    width: 100%;
+    height: 100vh;
+    background: var(--ab);
+}
+.skill .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill .container .imgbx img{
+    width: 30vw;
+}
+.skill .container .textbx .head h2{
+    color: var(--text);
+    font-size: 3rem;
+
+}
+.skill .container .textbx{
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+    width: 50%;
+}
+.skill .container .textbx .pro .meter{
+    width: 100%;
+    height: 20px;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.skill .container .textbx .pro .meter span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--text);
+    border-radius: 20px;
+}
+.skill .container .textbx .pro .meter span h4{
+    padding: 2px;
+    font-size: 15px;
+    padding-left: 2em;
+    color: #fff;
+}
+#html{
+    width: 98%;
+    animation:html 3s infinite;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+    
+}
+#css{
+    width: 90%;
+    animation:css 3s infinite;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+    
+}
+#java{
+    width: 80%;
+    animation:java 3s infinite;
+}
+@keyframes java {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+    
+}
+#boot{
+    width: 92%;
+    animation:boot 3s infinite;
+}
+@keyframes boot {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 92%;
+    }
+    
+}
+#react{
+    width: 30%;
+    animation:react 3s infinite;
+}
+@keyframes react {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+    
+}
+#php{
+    width: 20%;
+    animation:php 3s infinite;
+}
+@keyframes php {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:20%;
+    }
+    
+}
+.skill .container .textbx .pro h1{
+    color: #fff;
+    font-size: 15px;
+    padding: 2px;
+}
+.skill .container .textbx .pro{
+    padding-top: 2em;
+}
+.plan{
+    width: 100%;
+    height: 100vh;
+    background: var(--ab);
+}
+.plan .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    padding: 8em;
+    gap: 3em;
+}
+.plan .top{
+    text-align: center;
+
+}
+.plan .top span{
+    color: #fff;
+    font-size: 2em;
+    opacity: 0.4;
+}
+.plan .top .dt{
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+}
+.plan .top .dt .cheak h2{
+    color: #fff;
+    font-size: 1rem;
+    z-index: 2;
+    color: #ff9600;
+}
+.plan .top .dt .cheak{
+    width: 200px;
+    height: 35px;
+    background-color: var(--text);
+    border-radius: 20px;
+    padding: 2em;
+    margin: 10px;
+    margin-top: 4em;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+#yr{
+    color: #fff;
+}
+.plan .container .det ul li{
+    display: inline-block;
+    transform: translateX(70px);
+    transition: 0.2s;
+}
+.plan .container .det ul li:nth-child(2){
+    transform: translateX(500px);
+}
+.plan .top .dt .cheak::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.plan .top .dt .cheak.ac #mon{
+    color: #fff;
+}
+.plan .top .dt .cheak.ac #yr{
+    color: var(--text);
+}
+.plan .top .dt .cheak.ac::after{
+    left: 50%;
+}
+.plan .container .card .det{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.plan .container .card .det .serial.tr li{
+    transform: translateX(-60px);
+    transition: 0.2s;
+
+}
+.plan .container .card .det .serial.tr li:nth-child(1){
+    transform: translateX(-250px);
+    transition: 0.2s;
+}
+.plan .container .card .det .serial2.ac li{
+    transform: translateX(-60px);
+    transition: 0.2s;
+
+}
+.plan .container .card .det .serial2.ac li:nth-child(1){
+    transform: translateX(-250px);
+    transition: 0.2s;
+}
+.plan .container .card .det .serial3.ac li{
+    transform: translateX(-60px);
+    transition: 0.2s;
+
+}
+.plan .container .card .det .serial3.ac li:nth-child(1){
+    transform: translateX(-250px);
+    transition: 0.2s;
+}
+.plan .container .card .det span .fa.fa-cheak{
+    color: rgb(0, 255, 0);
+}
+.plan .container .card .det h1{
+    font-size: 4rem;
+    color: #fff;
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+}
+.plan .container .card .det sup{
+    color: var(--text);
+}
+.plan .container .card .det span{
+    font-size: 20px;
+    color: #fff;
+    line-height: 2;
+    
+}
+.plan .container .card .up{
+    text-align: center;
+    font-size: 5em;
+    font-weight: 300;
+    color: #fff;
+    background-color: var(--text);
+    border-radius: 0 0 20px 20px;
+    padding: 0.3em;
+}
+.plan .container .card .det span:last-child{
+    padding-bottom: 3rem;
+}
+.plan .container .card .det span i{
+    padding-right: 0.2em;
+}
+.plan .container .card .det span i{
+    color: rgb(0, 255, 0);
+}
+.plan .container .card{
+    background-color: var(--shad);
+    padding: 2em;
+    padding-top: 0;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.plan .container .card .det a{
+    padding: 20px 40px;
+    background-color: var(--text);
+    color: #fff;
+    font-size: 1rem;
+    transform: translateY(20px);
+    border-radius: 20px;
+}
+.plan .container .card .det a:hover{
+    background: var(--shad);
+    border: 2px solid var(--text);
+}
+#ross{
+    color: red;
+}
+.comment{
+    width: 100%;
+    height: 80vh;
+    padding: 2em;
+    background: var(--ab);
+
+}
+.comment .container{
+    display: flex;
+    align-items: center;
+}
+.comment .container .card{
+    width: 500px;
+    height: 300px;
+    background: var(--shad);
+    padding: 2em;
+    margin-top: 1em;
+
+}
+.comment .container .card i{
+    background:var(--text);
+    padding: 10px;
+    color: #fff;
+    font-size: 4rem;
+    padding-bottom: 0;
+    transform: translateY(-60px);
+    border-radius: 100%;
+}
+.comment .container .card .textbx .text h1{
+    color: #fff;
+    font-size: 2em;
+
+}
+.comment .container .card .textbx .text p{
+    color: #fff;
+}
+.comment .container .card .textbx .com{
+    color: #fff;
+    font-size: 1.3em;
+    padding-top: 2em;
+}
+.contect{
+    width: 100%;
+    background: var(--ab);
+    height: 110vh;
+
+}
+.contect .container{
+    padding: 4em;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+}
+.contect .container .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    height: 82vh;
+    gap: 2em;
+    background: var(--shad);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.contect .container .form .con{
+    width: 60%;
+    gap: 2em;
+    
+}
+#sub{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--text);
+    color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 2em;
+}
+.contect .container .form .con h1{
+    color: #fff;
+    font-size: 5em;
+    text-align:center;
+    padding-bottom: 3rem;
+}
+.contect .container .form .inp{
+    display: flex;
+    gap: 2em;
+}
+.contect .container .form .inp input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 1em;
+    background: var(--shad);
+
+    border: 2px solid var(--text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4),inset 0 0 10px rgba(0, 0, 0, 0.4);
+    color:#fff;
+
+}
+.contect .container .form .inp input::placeholder{
+    color: #fff;
+}
+
+.contect .container .form textarea{
+    width: 100%;
+    padding: 1em;
+    height: 150px;
+    margin-top: 2em;
+    border-radius: 10px;
+    background: var(--shad);
+    color: #fff;
+
+    border: 2px solid var(--text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4),inset 0 0 10px rgba(0, 0, 0, 0.4);
+
+}
+#map{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    height: 40vh;
+    border-radius: 10px;
+}
+.contect .container .box .info .det h2 i{
+    color: var(--text);
+    padding-right: 0.3em;
+}
+.contect .container .box .info .det h2{
+    color: #fff;
+    font-size: 2em;
+
+}
+.contect .container .box .info h1{
+    color: #fff;
+    font-size: 3em;
+    padding-bottom: 2em;
+}
+.contect .container .box .info .det .social h3{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 100;
+    padding-top: 1em;
+ 
+}
+.contect .container .box .info .det .social .ico i{
+    background-color: #ff9600;
+    padding: 10px;
+    color: #fff;
+    border-radius: 100%;
+    transition: 0.2s;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.contect .container .box .info .det .social .ico i:hover{
+    transform: translateY(-10px);
+}
+.contect .container .box .info{
+    width: 100%;
+    height: 40vh;
+    background: var(--shad);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding-left: 4em;border-radius: 10px;
+
+}
+.contect .container .box{
+    padding: 2em;
+}
+.contect .top{
+    text-align: center;
+}
+.contect .top span{
+    color:#fff;
+    font-size: 2rem;
+    opacity: 0.4;
+}
+.contect .top h1{
+    color: #fff;
+    font-size: 7em;
+}
+#sub:hover{
+    background: #fff;
+    color: #ff9600;
+}
+#sub{
+    cursor: pointer;
+}
+#na{
+    width: 160%;
+    display: flex;
+    flex-direction: column;
+    
+}
+#sub.anim.ac{
+    width: 20%;
+    transition: 0.2s;
+    background-color: red;
+}
+#sub.anim.ac:hover{
+    transform: translateX(200px);
+
+}
+.comment .top{
+    text-align: center;
+    color: var(--text);
+    font-size: 5em;
+}
+@media screen and (max-width:1280px) {
+    .plan .container{
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    }
+    .plan .container .card{
+        max-height: 70vh;
+    }
+    .plan .container .card.card2 .det .serial li{
+        transform: translateX(0px);
+        transition: 0.2s;
+        padding-top: 0;
+    
+    }
+    .plan .container .card.card2 .det .serial li:nth-child(2){
+        transform: translateX(300px);
+        transition: 0.2s;
+        position: absolute;
+    }
+    .plan .container .card.card3 .det .serial li{
+        transform: translateX(0px);
+        transition: 0.2s;
+        padding-top: 0;
+    
+    }
+    .plan .container .card.card3 .det .serial li:nth-child(2){
+        transform: translateX(300px);
+        transition: 0.2s;
+        position: absolute;
+    }
+    .plan .container .card .det .serial2.ac li{
+        transform: translateX(19900px);
+        transition: 0.2s;
+        position: absolute;
+    
+    }
+    .plan .container .card .det .serial2.ac li:nth-child(2){
+        transform: translateX(00px);
+        transition: 0.2s;
+        position: relative;
+    }
+    .plan .container .card .det .serial3.ac li{
+        transform: translateX(200px);
+        transition: 0.2s;
+        position: absolute;
+    
+    }
+    .plan .container .card .det .serial3.ac li:nth-child(2){
+        transform: translateX(00px);
+        transition: 0.2s;
+        position: relative;
+    }
+}
+@media screen and (max-width:867px) {
+    .home .textbx h1{
+        font-size: 4em;
+    }
+    .home .textbx p{
+        width: 100%;
+    }
+    .about .textbx .text{
+        padding-left: 2em;
+    }
+    .about .textbx .text P{
+        font-size: 10px;
+        width: 90%;
+        height: 70%;
+        overflow:hidden;
+    }
+    .service{
+        height: 110vh;
+    }
+}
+@media screen and (max-width:1220px){
+    .service{
+        height:120vh ;
+    }
+}
+@media screen and (max-width:787px) {
+    body{
+        overflow-x: hidden;
+    }
+    .home{
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .textbx{
+        padding: 2em;
+        padding-left: 4rem;
+    }
+    .home .textbx h1{
+        font-size: 30px;
+    }
+    .home .imgbx{
+        padding:0 ;
+        text-align: center;
+    }
+    .home .imgbx img{
+        width: 80%;
+    }
+    .home .textbx h2{
+        font-size: 25px;
+    }
+    .about{
+        flex-direction:column ;
+        justify-content: center;
+        align-items: center;
+    }
+    .about .imgbx{
+        padding: 0%;
+        text-align: center;
+    }
+    .about .imgbx img{
+        width: 90%;
+
+    }
+    .about .textbx{
+        transform: translateX(0) translateY(0);
+        width: 90%;
+    }
+    .about .textbx .text p{
+        font-size: 11px;
+    }
+    .about .textbx .text{
+        padding: 2em;
+    }
+
+.nav{
+    width: 0%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--text);
+    z-index: 33;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.nav .logo{
+    color: #fff;
+    font-size: 4em;
+}
+.nav ul li{
+    display: block;
+    line-height: 4;
+}
+.nav .logo{
+    padding: 0%;
+}
+.nav .con{
+    padding: 0%;
+    padding-top: 1em;
+}
+.btn{
+    background-color: var(--text);
+    position: fixed;
+    width: 60px;
+    right: 10px;
+    top: 10px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 30px;
+    z-index: 74;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.btn span{
+    position: absolute;
+    background-color: #fff;
+    width: 90%;
+    height: 10px;
+    top: 7px;
+    left: 3px;
+    border-radius: 20px;
+    transition: 0.7s;
+}
+.btn span:nth-child(2){
+    top: 22px;
+    width: 100%;
+    left: 0;
+}
+.btn span:nth-child(3){
+    top: 38px;
+    width: 30%;
+    right: 0;
+}
+.nav.active{
+    width: 100%;
+    transition: 0.5s;
+}
+.btn.active{
+    overflow: visible;
+    transition: 0.5s;
+}
+.btn.active span:nth-child(2){
+    transform: translateX(-90px);
+    transition: 0.7s;
+    opacity: 0;
+
+}
+.btn.active span:nth-child(1){
+    transform: rotate(60deg) translateY(20px) translateX(10px);
+    transition: 0.7s;
+    
+
+}
+.btn.active span:nth-child(3){
+    transform: rotate(310deg) translateY(-20px);
+    transition: 0.7s;
+    transition-delay: 0.4s;
+    width: 90%;
+
+}
+.service{
+    height: 220vh;
+}
+.service .container{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.service .container .card{
+    width: 90%;
+}
+.service .container .card:hover{
+    transform: translateY(0) scale(1.03);
+
+}
+.skill{
+    height: 120vh;
+    
+}
+.skill .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill .container .imgbx {
+    text-align: center;
+    padding-right: 0;
+    padding-top: 5rem;
+}
+.skill .container .imgbx img{
+ 
+    width: 90%;
+}
+.skill .container .textbx{
+    width: 90%;
+    padding-left: 0;
+}
+.service .container .card .textbx p{
+    font-size: 12px;
+}
+.plan{
+    height: 200vh;
+}
+.plan .container{
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.plan .container .card{
+    width: 90%;
+    height: 400px;
+}
+.plan .container .card .det h1{
+    font-size: 5em;
+    padding-bottom:3px;
+}
+.plan .container .card .det span{
+    line-height: 1.4;
+}
+.plan .container .card .up{
+    font-size: 3em;
+}
+.plan .container .card.card2 .det .serial li{
+    transform: translateX(0px);
+    transition: 0.2s;
+    padding-top: 0;
+
+}
+.plan .container .card.card2 .det .serial li:nth-child(2){
+    transform: translateX(300px);
+    transition: 0.2s;
+    position: absolute;
+}
+.plan .container .card.card3 .det .serial li{
+    transform: translateX(0px);
+    transition: 0.2s;
+    padding-top: 0;
+
+}
+.plan .container .card.card3 .det .serial li:nth-child(2){
+    transform: translateX(300px);
+    transition: 0.2s;
+    position: absolute;
+}
+.plan .container .card .det .serial2.ac li{
+    transform: translateX(110px);
+    transition: 0.2s;
+    position: absolute;
+
+}
+.plan .container .card .det .serial2.ac li:nth-child(2){
+    transform: translateX(00px);
+    transition: 0.2s;
+    position: relative;
+}
+.plan .container .card .det .serial3.ac li{
+    transform: translateX(200px);
+    transition: 0.2s;
+    position: absolute;
+
+}
+.plan .container .card .det .serial3.ac li:nth-child(2){
+    transform: translateX(00px);
+    transition: 0.2s;
+    position: relative;
+}
+.contect .container{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1em;
+}
+.contect .container .form{
+    width: 90%;
+}
+.contect .container .box{
+    width: 94%;
+}
+.contect{
+    height: 200vh;
+}
+.contect .container .form .inp{
+    flex-direction: column;
+}
+.contect .container .form .inp input{
+    width: 63%;
+}
+.comment .container .card{
+    width: 90%;
+}
+.comment .container .card .textbx .text {
+    padding: 0;
+    top: 15%;
+    position: absolute;
+    
+}
+.comment .container .card .text .com{
+    font-size: 10px;
+    padding: 0;
+}
+
+}
+@media screen and (max-width:400px){
+    .plan{
+        height: 218vh;
+    }
+    .plan .container .card .det span{
+        font-size: 15px;
+    }
+    .plan .container .card .det .serial li{
+        transform: translateX(0px);
+        transition: 0.2s;
+        padding-top: 0;
+    
+    }
+    .plan .container .card .det .serial li:nth-child(2){
+        transform: translateX(300px);
+        transition: 0.2s;
+        position: absolute;
+    }.plan .container .card .det .serial.tr li{
+        transform: translateX(200px);
+        transition: 0.2s;
+        position: absolute;
+    
+    }
+    .plan .container .card .det .serial.tr li:nth-child(2){
+        transform: translateX(00px);
+        transition: 0.2s;
+        position: relative;
+    }
+    .plan .container .card{
+        max-height: 60vh;
+    }
+    .contect{
+        height: 210vh;
+    }
+    .comment .container .card .textbx .text {
+        padding: 0;
+        margin-top: -100px;
+        position: absolute;
+        
+    }
+    .comment .container .card .text .com{
+        font-size: 10px;
+        padding: 0;
+    }
+}
+@media screen and (max-width:1100px){
+    .plan .container{
+        grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    }
+    .plan .container .card.card2 .det .serial li{
+        transform: translateX(0px);
+        transition: 0.2s;
+        padding-top: 0;
+    
+    }
+    .plan .container .card.card2 .det .serial li:nth-child(2){
+        transform: translateX(300px);
+        transition: 0.2s;
+        position: absolute;
+    }
+    .plan .container .card.card3 .det .serial li{
+        transform: translateX(0px);
+        transition: 0.2s;
+        padding-top: 0;
+    
+    }
+    .plan .container .card.card3 .det .serial li:nth-child(2){
+        transform: translateX(300px);
+        transition: 0.2s;
+        position: absolute;
+    }
+    .plan .container .card .det .serial2.ac li{
+        transform: translateX(19900px);
+        transition: 0.2s;
+        position: absolute;
+    
+    }
+    .plan .container .card .det .serial2.ac li:nth-child(2){
+        transform: translateX(00px);
+        transition: 0.2s;
+        position: relative;
+    }
+    .plan .container .card .det .serial3.ac li{
+        transform: translateX(200px);
+        transition: 0.2s;
+        position: absolute;
+    
+    }
+    .plan .container .card .det .serial3.ac li:nth-child(2){
+        transform: translateX(00px);
+        transition: 0.2s;
+        position: relative;
+    }
+    .plan .container .card .det .serial li{
+        transform: translateX(0px);
+        transition: 0.2s;
+        padding-top: 0;
+        padding-bottom: 0;
+    
+    }
+    .plan .container .card .det .serial li:nth-child(2){
+        transform: translateX(300px);
+        transition: 0.2s;
+        position: absolute;
+    }.plan .container .card .det .serial.tr li{
+        transform: translateX(200px);
+        transition: 0.2s;
+        position: absolute;
+    
+    }
+    .plan .container .card .det .serial.tr li:nth-child(2){
+        transform: translateX(00px);
+        transition: 0.2s;
+        position: relative;
+    }
+    .plan .container .card .det span{
+        font-size: 15px;
+    }
+    
+}
